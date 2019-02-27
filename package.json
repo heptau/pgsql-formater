@@ -1,0 +1,48 @@
+{
+	"name": "pgsql-formatter",
+	"displayName": "PgSQL Formatter",
+	"description": "PgSQL code formatter.",
+	"version": "0.1.0",
+	"publisher": "Zbyněk Vanžura",
+	"engines": {
+		"vscode": "^1.19.0"
+	},
+	"categories": [
+		"Other",
+		"Formatters"
+	],
+	"activationEvents": [
+		"onCommand:extension.pgsqlFormatter"
+	],
+	"main": "./out/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.pgsqlFormatter",
+				"title": "PgSQL Formatter"
+			}
+		]
+	},
+	"icon": "images/icon.png",
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^2.6.1",
+		"vscode": "^1.1.6",
+		"@types/node": "^7.0.43",
+		"@types/mocha": "^2.2.42"
+	},
+	"dependencies": {
+		"camelcase": "^4.1.0"
+	},
+	"__metadata": {
+		"id": "db605c91-5406-44b8-b007-ed44a59369ad",
+		"publisherId": "cd1889b4-4967-4bd9-9415-2e49627250ef",
+		"publisherDisplayName": "Zbyněk Vanžura"
+	}
+}
